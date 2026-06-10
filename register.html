@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clash of BaNG – Register</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <nav>
+      <div class="nav1">
+        <img
+          class="nav2"
+          src="assets/cover.thumb256 1.png"
+          alt="Clash of BaNG logo"
+        >
+        <span class="nav3">Clash of BaNG</span>
+        <span class="navjp" aria-hidden="true">ちいかわ</span>
+      </div>
+
+      <button class="nav4" id="navbtn" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav5" id="navmenu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="troops.html">troops</a></li>
+        <li><a href="gallery.html">gallery</a></li>
+        <li><a href="register.html">register</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+<h1 class="txt2">Register</h1>
+    <div class="reg1">
+
+      <div class="reg2">
+<form id="form1" novalidate>
+<div class="reg3">
+            <label class="lab1" for="username">Username</label>
+            <input
+              class="inp1"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              autocomplete="username"
+            >
+            <span class="err1" id="errUsername">
+              Username cannot be empty and must be at least 3 characters.
+            </span>
+          </div>
+<div class="reg3">
+            <label class="lab1" for="email">Email Address</label>
+            <input
+              class="inp1"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              autocomplete="email"
+            >
+            <span class="err1" id="errEmail">
+              Please enter a valid email address containing "@" and ".".
+            </span>
+          </div>
+<div class="reg3">
+            <label class="lab1" for="age">Age</label>
+            <input
+              class="inp1"
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Enter your age (13 – 60)"
+              min="13"
+              max="60"
+            >
+            <span class="err1" id="errAge">
+              Age must be a number between 13 and 60.
+            </span>
+          </div>
+<div class="reg3">
+            <span class="lab1">Gender</span>
+            <div class="rad1">
+              <label class="rad2">
+                <input type="radio" name="gender" value="Male"> Male
+              </label>
+              <label class="rad2">
+                <input type="radio" name="gender" value="Female"> Female
+              </label>
+            </div>
+            <span class="err1" id="errGender">
+              Please select your gender.
+            </span>
+          </div>
+<div class="reg3">
+            <label class="lab1" for="troop">Favourite Troop</label>
+            <select class="inp2" id="troop" name="troop">
+              <option value="">— Select a troop —</option>
+              <option value="Chiikawa">Chiikawa</option>
+              <option value="Hachiware">Hachiware</option>
+              <option value="Usagi">Usagi</option>
+              <option value="Momonga">Momonga</option>
+              <option value="Rakko">Rakko</option>
+              <option value="Kurimanju">Kurimanju</option>
+              <option value="Shisa">Shisa</option>
+              <option value="Kani">Kani</option>
+            </select>
+            <span class="err1" id="errTroop">
+              Please select your favourite troop.
+            </span>
+          </div>
+<div class="reg3">
+            <label class="lab1" for="reason">Reason to Join</label>
+            <textarea
+              class="inp3"
+              id="reason"
+              name="reason"
+              placeholder="Tell us why you want to join Clash of BaNG (at least 10 characters)..."
+            ></textarea>
+            <span class="err1" id="errReason">
+              Reason cannot be empty and must be at least 10 characters.
+            </span>
+          </div>
+<button class="btn2" type="submit">
+            Join the Clan
+          </button>
+<div class="ok1" id="okMsg">
+            Registration successful! Welcome to the Clash of BaNG clan.
+          </div>
+
+        </form>
+
+      </div>
+</div>
+</main>
+<footer>
+    <p>Clash of BaNG &copy; 2026.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
