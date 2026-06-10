@@ -1413,10 +1413,10 @@ body {
   }
 }
 
-/* final mobile hero safe fix */
+/* final mobile hero fix */
 @media screen and (max-width: 768px) {
   .home1 {
-    padding: 0 0 36px 0 !important;
+    padding: 18px 0 36px !important;
     overflow: hidden !important;
     background-size: cover !important;
     background-position: center top !important;
@@ -1424,45 +1424,49 @@ body {
 
   .home2 {
     display: flex !important;
-    flex-direction: column-reverse !important;
+    flex-direction: column !important;
     align-items: center !important;
     gap: 0 !important;
     width: 100% !important;
+    overflow: visible !important;
   }
 
   .home7 {
+    order: 1 !important;
     width: 100% !important;
-    margin: 0 !important;
-    padding: 14px 0 0 0 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     display: flex !important;
     justify-content: center !important;
     transform: none !important;
   }
 
   .home7 img {
-    width: 82vw !important;
-    max-width: 315px !important;
+    width: 78vw !important;
+    max-width: 300px !important;
     height: auto !important;
-    display: block !important;
     object-fit: contain !important;
+    border-radius: 0 !important;
     transform: none !important;
   }
 
   .home3 {
-    width: calc(100% - 34px) !important;
+    order: 2 !important;
+    width: calc(100% - 36px) !important;
     max-width: 390px !important;
-    margin: 12px auto 0 auto !important;
-    padding: 28px 24px !important;
+    margin: -8px auto 0 !important;
+    padding: 26px 24px !important;
     transform: none !important;
   }
 
   .home4 {
-    font-size: clamp(2.1rem, 10vw, 3rem) !important;
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
     line-height: 1.05 !important;
   }
 
-  .home5 {
+  .home5,
+  .home6 {
     font-size: 1rem !important;
-    line-height: 1.7 !important;
+    line-height: 1.65 !important;
   }
 }
