@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     petalLayer.appendChild(petal);
   }
   
-  // force trio float on mobile
+  // force trio float on mobile, matched with desktop floaty
   var trio = document.querySelector('.home7 img');
 
   if (trio) {
@@ -37,11 +37,27 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isMobile && !reduceMotion) {
       var startTime = null;
 
+      function easeInOut(t) {
+        return t * t * (3 - 2 * t);
+      }
+
       function moveTrio(time) {
         if (!startTime) startTime = time;
 
-        var progress = (time - startTime) % 4800;
-        var y = (Math.cos((progress / 4800) * Math.PI * 2) - 1) * 5;
+        var duration = 4800;
+        var half = duration / 2;
+        var elapsed = (time - startTime) % duration;
+        var t;
+        var y;
+
+        if (elapsed < half) {
+          t = elapsed / half;
+          y = -10 * easeInOut(t);
+        } else {
+          t = (elapsed - half) / half;
+          y = -10 + (10 * easeInOut(t));
+        }
+
         trio.style.setProperty('--trio-y', y.toFixed(2) + 'px');
 
         requestAnimationFrame(moveTrio);
@@ -52,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // simple reveal animation
-  var revealItems = document.querySelectorAll('.home3, .home7, .car1, .pop1, .abt2, .abt5, .yt1, .gal2, .reg2, .troop1, .troopintro');
+  var revealItems = document.querySelectorAll('.home3, .car1, .pop1, .abt2, .abt5, .yt1, .gal2, .reg2, .troop1, .troopintro');
   revealItems.forEach(function (el) {
     el.classList.add('reveal');
   });
