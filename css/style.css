@@ -1413,11 +1413,12 @@ body {
   }
 }
 
-/* mobile hero fix */
+/* mobile hero crop fix */
 @media screen and (max-width: 768px) {
   .home1 {
-    padding-top: 28px;
-    padding-bottom: 42px;
+    padding-top: 24px;
+    padding-bottom: 34px;
+    overflow: hidden;
   }
 
   .home2 {
@@ -1425,20 +1426,18 @@ body {
   }
 
   .home7 {
-    width: 100vw;
-    margin-left: calc(50% - 50vw) !important;
-    justify-content: flex-start !important;
-    transform: translateY(-18px) !important;
-    overflow: hidden;
+    justify-content: center;
+    margin-left: 0;
+    transform: translateY(-8px) !important;
   }
 
   .home7 img {
-    max-width: none;
-    width: min(125vw, 520px);
-    margin-left: -70px;
+    width: min(86vw, 340px) !important;
+    max-width: 340px !important;
+    height: auto;
   }
 
   .home3 {
-    margin-top: -50px;
+    margin-top: -16px;
   }
 }
