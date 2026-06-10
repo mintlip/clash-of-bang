@@ -1446,12 +1446,12 @@ body {
   }
 
   .home7 img {
-    width: 96vw !important;
-    max-width: 390px !important;
+    width: 90vw !important;
+    max-width: 365px !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: left top !important;
-    margin-left: -8px !important;
+    margin-left: -6px !important;
     margin-top: 0 !important;
     border-radius: 0 !important;
     transform: none !important;
