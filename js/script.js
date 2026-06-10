@@ -26,6 +26,29 @@ document.addEventListener('DOMContentLoaded', function () {
     petal.style.animationDelay = (-Math.random() * 14) + 's';
     petalLayer.appendChild(petal);
   }
+  
+  // force trio float on mobile
+  var trio = document.querySelector('.home7 img');
+
+  if (trio) {
+    var isMobile = window.matchMedia('(max-width: 768px)').matches;
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isMobile && !reduceMotion) {
+      var startTime = null;
+
+      function moveTrio(time) {
+        if (!startTime) startTime = time;
+
+        var y = Math.sin((time - startTime) / 520) * 10;
+        trio.style.setProperty('--trio-y', y.toFixed(2) + 'px');
+
+        requestAnimationFrame(moveTrio);
+      }
+
+      requestAnimationFrame(moveTrio);
+    }
+  }
 
   // simple reveal animation
   var revealItems = document.querySelectorAll('.home3, .home7, .car1, .pop1, .abt2, .abt5, .yt1, .gal2, .reg2, .troop1, .troopintro');
