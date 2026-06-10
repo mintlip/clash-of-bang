@@ -1425,13 +1425,17 @@ body {
   }
 
   .home7 {
-    justify-content: center;
-    margin-left: 0;
+    width: 100vw;
+    margin-left: calc(50% - 50vw) !important;
+    justify-content: flex-start !important;
     transform: translateY(-18px) !important;
+    overflow: hidden;
   }
 
   .home7 img {
-    width: min(95vw, 390px);
+    max-width: none;
+    width: min(125vw, 520px);
+    margin-left: -70px;
   }
 
   .home3 {
