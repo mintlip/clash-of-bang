@@ -1413,10 +1413,10 @@ body {
   }
 }
 
-/* final mobile hero fix */
+/* final mobile hero overlap fix */
 @media screen and (max-width: 768px) {
   .home1 {
-    padding: 18px 0 36px !important;
+    padding: 0 0 34px 0 !important;
     overflow: hidden !important;
     background-size: cover !important;
     background-position: center top !important;
@@ -1425,42 +1425,52 @@ body {
   .home2 {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: stretch !important;
     gap: 0 !important;
     width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
     overflow: visible !important;
   }
 
   .home7 {
     order: 1 !important;
     width: 100% !important;
-    margin: 0 auto !important;
+    margin: 0 !important;
     padding: 0 !important;
     display: flex !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
     transform: none !important;
+    z-index: 1 !important;
   }
 
   .home7 img {
-    width: 78vw !important;
-    max-width: 300px !important;
+    width: 96vw !important;
+    max-width: 390px !important;
     height: auto !important;
     object-fit: contain !important;
+    object-position: left top !important;
+    margin-left: -8px !important;
+    margin-top: 0 !important;
     border-radius: 0 !important;
     transform: none !important;
   }
 
   .home3 {
     order: 2 !important;
-    width: calc(100% - 36px) !important;
+    position: relative !important;
+    z-index: 2 !important;
+    width: calc(100% - 34px) !important;
     max-width: 390px !important;
-    margin: -8px auto 0 !important;
+    margin: -30px auto 0 auto !important;
     padding: 26px 24px !important;
     transform: none !important;
+    background: rgba(255, 255, 255, 0.88) !important;
   }
 
   .home4 {
-    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+    font-size: clamp(2.05rem, 9vw, 2.75rem) !important;
     line-height: 1.05 !important;
   }
 
