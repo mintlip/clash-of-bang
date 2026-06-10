@@ -1412,3 +1412,29 @@ body {
     opacity: 0.78;
   }
 }
+
+/* mobile hero fix */
+@media screen and (max-width: 768px) {
+  .home1 {
+    padding-top: 28px;
+    padding-bottom: 42px;
+  }
+
+  .home2 {
+    gap: 0;
+  }
+
+  .home7 {
+    justify-content: center;
+    margin-left: 0;
+    transform: translateY(-18px) !important;
+  }
+
+  .home7 img {
+    width: min(95vw, 390px);
+  }
+
+  .home3 {
+    margin-top: -50px;
+  }
+}
