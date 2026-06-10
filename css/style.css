@@ -1413,31 +1413,56 @@ body {
   }
 }
 
-/* mobile hero crop fix */
+/* final mobile hero safe fix */
 @media screen and (max-width: 768px) {
   .home1 {
-    padding-top: 24px;
-    padding-bottom: 34px;
-    overflow: hidden;
+    padding: 0 0 36px 0 !important;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: center top !important;
   }
 
   .home2 {
-    gap: 0;
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 0 !important;
+    width: 100% !important;
   }
 
   .home7 {
-    justify-content: center;
-    margin-left: 0;
-    transform: translateY(-8px) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 14px 0 0 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    transform: none !important;
   }
 
   .home7 img {
-    width: min(86vw, 340px) !important;
-    max-width: 340px !important;
-    height: auto;
+    width: 82vw !important;
+    max-width: 315px !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    transform: none !important;
   }
 
   .home3 {
-    margin-top: -16px;
+    width: calc(100% - 34px) !important;
+    max-width: 390px !important;
+    margin: 12px auto 0 auto !important;
+    padding: 28px 24px !important;
+    transform: none !important;
+  }
+
+  .home4 {
+    font-size: clamp(2.1rem, 10vw, 3rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .home5 {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
   }
 }
