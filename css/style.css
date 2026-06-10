@@ -1454,7 +1454,7 @@ body {
     margin-left: -6px !important;
     margin-top: 0 !important;
     border-radius: 0 !important;
-    transform: none !important;
+    animation: floatyMobile 4.8s ease-in-out infinite !important;
   }
 
   .home3 {
@@ -1478,5 +1478,15 @@ body {
   .home6 {
     font-size: 1rem !important;
     line-height: 1.65 !important;
+  }
+}
+
+@keyframes floatyMobile {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
   }
 }
