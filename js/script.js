@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var petal = document.createElement('span');
     petal.className = 'petal' + (i % 4 === 0 ? ' small' : '');
     petal.style.left = Math.random() * 100 + 'vw';
-    petal.style.setProperty('--size', (Math.random() * 7 + 11) + 'px');
+    petal.style.setProperty('--size', (Math.random() * 6 + 10) + 'px');
     petal.style.setProperty('--drift', (Math.random() * 90 - 45) + 'px');
     petal.style.setProperty('--rot', (Math.random() * 90 - 45) + 'deg');
     petal.style.animationDuration = (Math.random() * 6 + 11) + 's';
