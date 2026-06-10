@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
       function moveTrio(time) {
         if (!startTime) startTime = time;
 
-        var y = Math.sin((time - startTime) / 520) * 10;
+        var progress = (time - startTime) % 4800;
+        var y = (Math.cos((progress / 4800) * Math.PI * 2) - 1) * 5;
         trio.style.setProperty('--trio-y', y.toFixed(2) + 'px');
 
         requestAnimationFrame(moveTrio);
