@@ -83,4 +83,4 @@ Some visual references and assets are inspired by or taken from the following so
 
 This website is deployed using GitHub Pages.
 
-Live Website:
+Live Website: https://mintlip.github.io/clash-of-bang/
